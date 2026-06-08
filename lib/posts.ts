@@ -2,6 +2,7 @@ import { marked } from "marked";
 import { promises } from "node:fs";
 import sanitize from "sanitize-html";
 import { parse } from "yaml";
+import markedCodePreview from "marked-code-preview";
 
 export function extractDateFromSlug(slug: string): Date {
     const [year, month, day] = slug.split("-").slice(0, 3).map(s => parseInt(s));
@@ -17,7 +18,7 @@ export async function loadPost(slug: string) {
     }
     const { frontmatter, markdown } = components.groups;
     const attrs = parse(frontmatter);
-    const cleanHTML = sanitize(await marked.parse(markdown));
+    const cleanHTML = sanitize(await marked.use(markedCodePreview()).parse(markdown));
     const posted = extractDateFromSlug(slug);
 
     return { slug, attrs, cleanHTML, markdown, posted };
