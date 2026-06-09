@@ -1,6 +1,6 @@
 # I've spent the past 15+ years working as an engineer and a technical leader.
 
-I've had a fascination with computers as long as I could remember. Early in my career I sort of [fell into software engineering](/blog/2022-01-24), and everything in my career has kind of grown out of that. 
+I've had a fascination with computers as long as I could remember. Early in my career I sort of [fell into software engineering](/blog/2022-01-24-build-something-dumb), and everything in my career has kind of grown out of that. 
 
 My primary expertise is in cloud engineering and DevOps. I currently lead a team of engineers focused on Developer Experience and Release Engineering. Essentially, our job is **to make sure engineering changes get to production quickly and safely.**
 
