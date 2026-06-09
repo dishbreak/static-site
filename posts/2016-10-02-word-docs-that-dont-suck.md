@@ -27,7 +27,7 @@ Let's list the rules first, then go over them in practice. I'm going to cover Wo
 
 ### Rule #1: Don't Play With Fonts or Spacing Until You're Done Writing
 
-<img src="/img/word-docs/surprised_cat.jpg">
+<img src="/public/posts/word-docs/surprised_cat.jpg">
 
 Wait, ***what?!*** This may be a hard one for some people to grasp, but it's the first rule on the board for a reason. It's second nature to pick your fonts and spacings and page borders before you start writing. This only wastes time, and it makes even more work for you later on if you decide you want to change something. **Get your content into Word *first*, then try adjusting things.** 
 
@@ -36,19 +36,19 @@ There's a couple of advantages to doing this. First, you get to the business of 
 What's that? I hear you ask, *but Vishal, how will I be able to change the fonts and spacing afterwards?* I can understand the confusion. Won't it be more work to select everything and set the fonts later? NO! Allow me to introduce the next concept to you...
 
 ### Rule #2: Build Your Document Using *Styles*, not Fonts
-<img src="/img/word-docs/styles_pane.png">
+<img src="/public/posts/word-docs/styles_pane.png">
 
 You see that above? How many times do you use it? The correct answer should be **every time you write a Word Document.** This is the *Styles* palette. These styles are your ticket to quickly changing the way the document looks with a few clicks. For example, here's a document where I've used the default styles to create headings and some text. Looks kind of bland, right?
 
-<img src="/img/word-docs/boring_styles.png">
+<img src="/public/posts/word-docs/boring_styles.png">
 
 Well, we won't stand for that. Since we used the styles as we wrote, we can change the way the whole document looks on the fly, just by selecting a different *Style Set*. A Style Set is simply a collection of styles (heading and body text) that go together. By clicking on the Design ribbon, we can choose from any number of style sets. 
 
-<img src="/img/word-docs/fun_styles.png">
+<img src="/public/posts/word-docs/fun_styles.png">
 
 Wow! That's probably a little *too* exciting for the annual report, huh? No problem. We can switch back to the original style set, and **tweak the styles to get what we want**. All you need to do is right-click on the style you want to change, then select *Modify Style*. A nifty dialog will pop up letting you change the font and paragraph spacing. If this seems a little too overwhelming for you, don’t worry! You should find something close enough to what you want.
 
-<img src="/img/word-docs/modify_style.png">
+<img src="/public/posts/word-docs/modify_style.png">
 
 So now you see--if you use the headings and other styles from the outset, no matter how ugly they are, **you can easily change them when you're done writing**. And the best part is that your changes are uniform. That is to say, if you change a style, *every* piece of text using it will change, too.
 
@@ -75,7 +75,7 @@ There's a couple of benefits to writing your documents this way. First, you work
 
 Look. I know you're a creative soul at heart. I know you've got that *really, really* cute font you like to use, and you love playing with bright colors like blue, green, and pink. You know, colors that "pop" (whatever that means). However, I've got a plea on behalf of anyone that will ever read what you're writing: **please don't**. 
 
-<img src="/img/word-docs/how_about_no.jpg">
+<img src="/public/posts/word-docs/how_about_no.jpg">
 
 I can understand the need to change things up, to try something unique. But consider that the stuff that's clichéd is clichéd for a reason--it works. Feel free to change your styles away from the defaults, but **remember that you're writing something other people will need to read**. Consider the following guidelines as you make design decisions. 
 

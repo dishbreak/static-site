@@ -19,7 +19,12 @@ export async function loadPost(slug: string) {
     }
     const { frontmatter, markdown } = components.groups;
     const attrs = parse(frontmatter);
-    const cleanHTML = sanitize(await marked.use(markedCodePreview()).parse(markdown));
+    const cleanHTML = sanitize(
+        await marked.use(markedCodePreview()).parse(markdown),
+        {
+            allowedTags: sanitize.defaults.allowedTags.concat("img")
+        }
+    );
     const posted = extractDateFromSlug(slug);
 
     return { slug, attrs, cleanHTML, markdown, posted };

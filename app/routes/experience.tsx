@@ -9,16 +9,17 @@ export async function loader({ }: Route.LoaderArgs): Promise<Resume> {
 }
 
 export default function Experience({ loaderData }: Route.ComponentProps): React.JSX.Element {
-    return <div className="mx-10">
+    return <div className="mx-10 pb-10">
         <div className="font-bold text-orange-400 text-6xl border-b-4 border-orange-400 pt-8 pb-3">{loaderData.name}</div>
         <Heading>Objective</Heading>
         <P>{loaderData.objective}</P>
-        <Heading>Professional Summary</Heading>
-        <ul className="list-disc list-outside ml-6">
-            {loaderData.summary.map((d, i) => <li key={`summary-${i}`}>{d}</li>)}
-        </ul>
+
         <div className="flex">
             <div className="flex-2/3 mr-2">
+                <Heading>Professional Summary</Heading>
+                <ul className="list-disc list-outside ml-6">
+                    {loaderData.summary.map((d, i) => <li key={`summary-${i}`}>{d}</li>)}
+                </ul>
                 <Heading>Key Achievements</Heading>
                 <ul className="list-disc list-outside ml-6">
                     {loaderData.key_achievements.map((a, i) => <li key={`ka-${i}`}>{a}</li>)}
@@ -36,7 +37,38 @@ export default function Experience({ loaderData }: Route.ComponentProps): React.
                 </ul>
             </div>
         </div>
+        <Heading>Experience</Heading>
+        {
+            loaderData.experience.map((o, i) => <div className="p-4 my-10 shadow-lg shadow-orange-300/15 bg-stone-900">
+                <div
+                    className="text-2xl font-bold text-orange-300 pt-8"
+                >{o.org} {toMonthYearRange(o)}</div>
+                {o.truncated && <div className="text-xl font-bold text-orange-300 pt-2 pb-2">Selected Highlights</div>}
+                {
+                    o.positions.map((p, j) => <div>
+                        <div className="text-lg font-bold text-orange-300 pt-2 pb-2">
+                            {p.position} {toMonthYearRange(p)}
+                        </div>
+                        <ul className="list-disc list-outside ml-6">
+                            {p.key_points.map((d, k) =>
+                                <li key={`summary-${[i, j, k].map(n => parseInt(n)).join("-")}`}>{d}</li>)}
+                        </ul>
+                    </div>)
+                }
+            </div>)
+        }
     </div>
+}
+
+
+
+function toMonthYearRange({ startDate, endDate }: { startDate: string, endDate?: string }): string {
+    return `(${toMonthYear(startDate)} - ${toMonthYear(endDate)})`
+}
+
+function toMonthYear(d: string | undefined): string {
+    if (d === undefined) return "Present"
+    return new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric" }).format(new Date(d))
 }
 
 function Heading({ children }: { children: React.ReactNode }): React.JSX.Element {

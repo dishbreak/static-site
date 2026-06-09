@@ -5,6 +5,7 @@ export default [
     layout("routes/navbar.tsx", [
         route("/about", "routes/about.tsx"),
         route("/experience", "routes/experience.tsx"),
+        route("/contact", "routes/contact.tsx"),
         ...prefix("/blog", [
             route("/", "routes/blog-archive.tsx"),
             route("/:slug", "routes/blog-post.tsx"),

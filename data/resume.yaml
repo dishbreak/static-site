@@ -32,6 +32,8 @@ keywords:
   - Systems monitoring/alerting
 experience:
   - org: NerdWallet
+    startDate: 2018-12-18
+    truncated: false
     positions:
       - position: Engineering Manager, Infrastructure Engineering
         startDate: 2022-04-01
@@ -50,6 +52,91 @@ experience:
           - Gitops
           - Github Actions
           - Vercel
+      - position: Staff Engineer, Production Engineering
+        startDate: 2019-12-18
+        endDate: 2022-03-31
+        key_points:
+          - Participated in a 24/7 oncall rotation, responding to incidents that impacted our site's ability to operate.
+          - Planned and executed multiple migrations and upgrades, including a database split, major version DB upgrade, and Dockerizing an existing application.
+          - Developed standards and best practices that teammates and other teams adopted around migration work and observability.
+        key_technologies:
+          - Python
+          - Go
+          - Terraform
+          - Docker
+          - Packer
+          - Amazon Web Services (EC2, ECS, IAM, Route53, RDS, Lambda, Redshift)
+          - Datadog
+          - ELK Stack
+  - org: QuanticMind
+    startDate: 2017-02-01
+    endDate: 2018-11-20
+    truncated: false
+    positions:
+      - position: Backend Engineer
+        startDate: 2017-11-01
+        endDate: 2018-11-20
+        key_points:
+          - Responsible for collaborating with product engineering to identify, specify, and prioritize features.
+          - Carried out feature development, complete with automated testing.
+          - Designed a phased rollout where we moved customers to an enhanced Mesos scheduler with persistence and high availability, resulting in a system with fewer maintenance needs and potential incidents.
+        key_technologies:
+          - Java
+          - Scala
+          - Docker
+          - MySQL
+          - Amazon Redshift
+          - Apache Mesos
+          - Zookeeper
+      - position: Technical Operations Engineer
+        startDate: 2017-02-01
+        endDate: 2018-11-20
+        key_points:
+          - Aided in the design of Java and Python-based microservices for internal and external use.
+          - Managed a complete, infrastructure-as-code Jenkins platform for handling application builds and deploys.
+          - Designed continuous delivery systems for dockerized web applications, including monitoring and alerting.
+        key_technologies:
+          - Java
+          - Python
+          - Scala
+          - Terraform
+          - Bash
+          - Docker
+          - Docker Compose
+          - Apache Mesos
+          - Zookeeper
+  - org: Lockheed Martin
+    truncated: true
+    startDate: 2009-06-01
+    endDate: 2017-02-01
+    positions:
+      - position: Panopticon -- Software Engineer and Evangelist
+        startDate: 2014-04-01
+        endDate: 2017-02-01
+        key_points:
+          - Software developer for Panopticon, a GeoSpatial integration and visualization platform for air/land/sea/space built on top of NASA’s Java-based WorldWind SDK
+          - Served as an evangelist and technical consultant for the platform, helping teams across the Lockheed Martin Corporation to exploit Panopticon’s capabilities in a wide array of applications.
+          - Maintained and documented Panopticon’s plugin based architecture, both in JavaDoc and internal wiki.
+        key_technologies:
+          - Java
+          - WebStart
+          - WorldWind
+          - Ant
+          - ReST
+          - SOAP
+          - DDS
+      - position: Rail Systems -- Lead Software Engineer
+        startDate: 2014-10-01
+        endDate: 2016-05-01
+        key_points:
+          - Led teams of up to 25 people in the design and development of a safety-critical positive train control (PTC) system for deployment to an Australian freight rail customer.
+          - Implemented several major functions, including a safety-critical acknowledgement feature
+        key_technologies:
+          - C++ (QNX Neutrino OS)
+          - C (TI RTOS)
+          - Java
+          - Python
+          - JIRA/FishEye/Crucible
 education:
   - institution: University of California, San Diego
     yearFrom: 2006

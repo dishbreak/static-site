@@ -1,19 +1,24 @@
-import { NavLink, Outlet } from "react-router";
+import { Link, NavLink, Outlet, type NavLinkRenderProps } from "react-router";
 import { links } from "../../lib/links";
 
 export default function NavBar(): React.JSX.Element {
     return <div className="w-full">
-        <div className="w-full flex top-0 sticky z-100 bg-stone-700 py-2 border-t-4 border-orange-500 text-orange-400">
-            <div className="flex grow ml-10">
+        <div className="w-full flex top-0 sticky z-100 bg-stone-700 border-t-4 border-orange-500 text-orange-400">
+            <Link to="/" className="flex grow ml-10 p-2 hover:text-stone-700 hover:bg-orange-400">
                 VISHAL KOTCHERLAKOTA
-            </div>
+            </Link>
             <nav>
-                <NavLink to="/" end className="px-2">HOME</NavLink>
+                <NavLink to="/" end className={getClassName}>HOME</NavLink>
                 {
-                    links.map((n, i) => <NavLink key={`nav-bar-${i}`} to={`/${n}`} className="px-2">{n.toUpperCase()}</NavLink>)
+                    links.map((n, i) => <NavLink key={`nav-bar-${i}`} to={`/${n}`} className={getClassName}>{n.toUpperCase()}</NavLink>)
                 }
             </nav>
         </div>
         <Outlet />
     </div>
+}
+
+function getClassName({ isActive }: NavLinkRenderProps): string {
+    const prefix = "p-2 hover:text-stone-700 hover:bg-orange-400"
+    return `${prefix} ${isActive ? "text-stone-700 bg-orange-500" : ""}`
 }

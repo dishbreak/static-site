@@ -12,6 +12,9 @@ export const ResumeSchema = z.object({
     "key_achievements": z.array(z.string()),
     "experience": z.array(z.object({
         org: z.string(),
+        startDate: z.iso.date(),
+        endDate: z.optional(z.iso.date()),
+        truncated: z.boolean().default(false),
         positions: z.array(z.object({
             position: z.string(),
             startDate: z.iso.date(),
