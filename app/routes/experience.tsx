@@ -39,19 +39,19 @@ export default function Experience({ loaderData }: Route.ComponentProps): React.
         </div>
         <Heading>Experience</Heading>
         {
-            loaderData.experience.map((o, i) => <div className="p-4 my-10 shadow-lg shadow-orange-300/15 bg-stone-900">
+            loaderData.experience.map((o, i) => <div key={`org=${i}`} className="p-4 my-10 shadow-lg shadow-orange-300/15 bg-stone-900">
                 <div
                     className="text-2xl font-bold text-orange-300 pt-8"
                 >{o.org} {toMonthYearRange(o)}</div>
                 {o.truncated && <div className="text-xl font-bold text-orange-300 pt-2 pb-2">Selected Highlights</div>}
                 {
-                    o.positions.map((p, j) => <div>
+                    o.positions.map((p, j) => <div key={`pos-${i}-${j}`}>
                         <div className="text-lg font-bold text-orange-300 pt-2 pb-2">
                             {p.position} {toMonthYearRange(p)}
                         </div>
                         <ul className="list-disc list-outside ml-6">
                             {p.key_points.map((d, k) =>
-                                <li key={`summary-${[i, j, k].map(n => parseInt(n)).join("-")}`}>{d}</li>)}
+                                <li key={`summary-${i}-${j}-${k}`}>{d}</li>)}
                         </ul>
                     </div>)
                 }
