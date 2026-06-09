@@ -1,0 +1,61 @@
+# yaml-language-server: $schema=./resume.schema.json
+name: Vishal Kotcherlakota
+objective: Build and lead high-performing engineering teams.
+summary:
+  - Self-directed with proven results in both in-office and full-time remote roles.
+  - Proven "player coach" with the ability to empower and lead ICs while contributing directly towards team goals.
+  - Capable individual contributor and technology leader, responsible for teams of up to 25 people.
+  - Specialist in DevOps technologies and processes.
+  - Comfortable working in cross-functional teams, collaborating with individuals of various backgrounds to design, release, and troubleshoot production-grade software applications.
+key_achievements:
+  - Oversaw a move to Kubernetes from a legacy container orchestrator.
+  - Migrated 600+ software repositories from Jenkins to Github Actions, utilizing AI Agents, tool-assisted automations, and reporting jobs to track overall progress.
+  - Migrated an identity service off of EC2 instances onto an ECS service with zero downtime and minimal impact to daily operations.
+  - Developed a utility that queried Elasticsearch data via histogram aggregation and exported metrics to Datadog via HTTP ReST. The utility fed C-Suite visiblity into business operations and site performance.
+skills:
+  languages:
+    - Python
+    - Go
+    - HCL
+    - TypeScript
+    - Bash
+  tools:
+    - Docker
+    - Github Actions
+    - Jenkins
+    - Terraform
+keywords:
+  - Microservices
+  - ReST API Design
+  - Infrastructure-as-code
+  - Config management
+  - Systems monitoring/alerting
+experience:
+  - org: NerdWallet
+    positions:
+      - position: Engineering Manager, Infrastructure Engineering
+        startDate: 2022-04-01
+        key_points:
+          - Hybrid Manager/IC role, full-time remote position.
+          - Led a team of 5 engineers focused on developer experience and release enginering.
+          - Empower developers with tooling to build/deploy software on multiple platforms, including Vercel, Kubernetes, and ECS.
+        key_technologies:
+          - Python
+          - Go
+          - TypeScript
+          - Terraform
+          - Docker
+          - Kubernetes
+          - Helm
+          - Gitops
+          - Github Actions
+          - Vercel
+education:
+  - institution: University of California, San Diego
+    yearFrom: 2006
+    yearTo: 2010
+    degree: B.S. Electrical Engineering
+  - institution: University of California, Los Angeles
+    yearFrom: 2012
+    yearTo: 2015
+    degree: M.S. Engineering (Computer Networks)
