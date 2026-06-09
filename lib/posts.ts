@@ -3,6 +3,7 @@ import { promises } from "node:fs";
 import sanitize from "sanitize-html";
 import { parse } from "yaml";
 import markedCodePreview from "marked-code-preview";
+import path from "path";
 
 export function extractDateFromSlug(slug: string): Date {
     const [year, month, day] = slug.split("-").slice(0, 3).map(s => parseInt(s));
@@ -30,4 +31,28 @@ export interface Post {
     posted: Date;
     markdown: string;
     cleanHTML: string;
+}
+
+export async function loadAllPosts() {
+    const posts: Post[] = [];
+
+    const postsDir = await promises.opendir("posts");
+    for await (const p of postsDir) {
+        if (!p.isFile()) {
+            continue;
+        }
+        const slug = path.basename(p.name, ".md");
+        posts.push(await loadPost(slug));
+    }
+
+    posts.sort((a, b) => {
+        if (a.posted == b.posted) {
+            return 0;
+        } else if (a.posted > b.posted) {
+            return -1;
+        }
+        return 1;
+    });
+
+    return posts;
 }
